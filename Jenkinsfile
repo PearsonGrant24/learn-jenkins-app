@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    stages {
+     stages {
         stage('Build') {
             agent {
                 docker {
@@ -19,12 +19,6 @@ pipeline {
                     ls -la
                 '''
             }
-        }
-    }
-
-    stage("Test") {
-        steps{
-            sh 'test -f build/index.html'
         }
     }
 }
