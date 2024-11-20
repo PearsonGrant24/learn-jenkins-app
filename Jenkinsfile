@@ -79,7 +79,7 @@ pipeline {
                 sh '''                                        
                     npm install netlify-cli --legacy-peer-deps
                     node_modules/.bin/netlify --version 
-                    echo "deploying to production. site id : NETLIFY_SITE_ID"
+                    echo "deploying to production. site id : $NETLIFY_SITE_ID"
                 '''
             }
         }
