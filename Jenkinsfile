@@ -77,8 +77,9 @@ pipeline {
                     npm install
                                        
                     npm install netlify-cli --legacy-peer-deps
-                    node --version
-                    netlify --version 
+                    npx netlify --version
+                    npm list netlify-cli
+                    npm audit fix --force
                 '''
             }
         }
