@@ -73,7 +73,10 @@ pipeline {
             }
             steps {
                 sh '''
-                    
+                    npm cache clean --force
+                    npm install
+                    npm config set sharp_binary_host "https://npm.taobao.org/mirrors/sharp"                    
+                    npm install netlify-cli --legacy-peer-deps
                     netlify --version 
                 '''
             }
