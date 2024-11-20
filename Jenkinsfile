@@ -73,13 +73,9 @@ pipeline {
             }
             steps {
                 sh '''
-                    npm cache clean --force
-                    npm install
-                                       
+                                        
                     npm install netlify-cli --legacy-peer-deps
-                    npx netlify --version
-                    npm list netlify-cli
-                    npm audit fix --force
+                    node_modules/.bin/netlify --version 
                 '''
             }
         }
